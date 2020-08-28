@@ -134,14 +134,12 @@ def csv_to_sql(
 
     print('Number of Rows iterrated {}'.format(counter))
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument("CSV", help="Path to csv")
-    parser.add_argument('-H', "--HOST", help="Host of SQL", default='localhost',)
-    parser.add_argument('-u', "--USER", help="USER  SQL", default='root')
-    parser.add_argument('-p', "--PASS", help="PASS of SQL", default='root')
-    parser.add_argument('-d', "--DATABASE", help="DATABASE in SQL", default='mydatabase')
-    parser.add_argument('-t', "--TABLE_NAME", help="TABLE_NAME in SQL", default='My_table')
-    
-    
-    args = parser.parse_args()
-csv_to_sql(HOST=args.HOST,USER=args.USER,PASS=args.PASS,DATABASE=args.DATABASE,TABLE_NAME=args.TABLE_NAME,FILE_PATH=args.CSV,CH=10000)
+   parser = argparse.ArgumentParser()
+   parser.add_argument("CSV", help="Path to csv")
+   parser.add_argument('-H', "--HOST", help="Host of SQL", default='localhost',)
+   parser.add_argument('-u', "--USER", help="USER  SQL", default='root')
+   parser.add_argument('-p', "--PASS", help="PASS of SQL", default='root')
+   parser.add_argument('-d', "--DATABASE", help="DATABASE in SQL", default='mydatabase')
+   parser.add_argument('-t', "--TABLE_NAME", help="TABLE_NAME in SQL", default='My_table')
+   args = parser.parse_args()
+   csv_to_sql(HOST=args.HOST,USER=args.USER,PASS=args.PASS,DATABASE=args.DATABASE,TABLE_NAME=args.TABLE_NAME,FILE_PATH=args.CSV,CH=10000)
